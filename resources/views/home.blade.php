@@ -13,15 +13,16 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #7c0c6e;">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #2F2C3E; margin-top: -10px;">
             <a class="navbar-brand" href="{{ route('public.home') }}">
-                <img src="{{ asset('img/LOGO1.png') }}" alt="Logo" style="height: 80px;">
+                <img src="{{ asset('img/Logo1.png') }}" alt="Logo" style="height: 100px;">
             </a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{{ route('public.home') }}">Home</a>
                     </li>
+
                     @auth
                         @if(auth()->user()->is_admin)
                             <li class="nav-item">
@@ -30,7 +31,7 @@
                         @endif
                     @endauth
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="">Locais</a>
+                        <a class="nav-link text-white" href="">Biblioteca de jogos</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -61,49 +62,55 @@
     </header>
 
     <main class="container mt-4">
-        <h1 class="text-center" style="color: #7c0c6e;">Realizar sonhos é o nosso DESTINO!</h1>
+        <h1 class="text-center" style="color: #D9D9D9;">Jogos Digitais</h1>
 
-        <p class="text-center" style="color: #555;">Seja bem-vindo</p>
+        <p class="text-center" style="color: #555;">Navegue por nossa loja de jogos digitais</p>
 
-        <div class="carousel-container p-4 my-4 bg-white">
-            <h2 class="text-center mb-4" style="color: #7c0c6e;">Sonhos</h2>
-            <div id="destinosCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-wrap="true">
+        <div class="carousel-container p-4 my-4" style="background-color: #444566;">
+            <h2 class="text-center mb-4" style="color: #D9D9D9;">Em destaque</h2>
+
+            <div id="promocoesCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-wrap="true">
+
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="{{ asset('img/destino1.jpg') }}" class="card-img-top" alt="Destino 1">
+                                    <img src="{{ asset('img/dead_by_daylight_imagem.png') }}" class="card-img-top" alt="Jogo 1">
                                     <div class="card-body">
-                                        <h5 class="card-title" style="color: #7c0c6e;">Destino 1</h5>
-                                        <p class="card-text" style="color: #555;">Descrição do destino 1.</p>
+                                        <h5 class="card-title" style="color: #B94949;">Dead by Daylight</h5>
+                                        <p class="card-text" style="color: #555;">Descrição do jogo 1.</p>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="{{ asset('img/destino2.jpg') }}" class="card-img-top" alt="Destino 2">
+                                    <img src="{{ asset('img/god_ragnarok_imagem.png') }}" class="card-img-top" alt="Jogo 2">
                                     <div class="card-body">
-                                        <h5 class="card-title" style="color: #7c0c6e;">Destino 2</h5>
-                                        <p class="card-text" style="color: #555;">Descrição do destino 2.</p>
+                                        <h5 class="card-title" style="color: #B94949;">God of War Ragnarok</h5>
+                                        <p class="card-text" style="color: #555;">Descrição do jogo 2.</p>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="{{ asset('img/destino3.jpg') }}" class="card-img-top" alt="Destino 3">
+                                    <img src="{{ asset('img/hogwarts_legacy_imagem.png') }}" class="card-img-top" alt="Jogo 3">
                                     <div class="card-body">
-                                        <h5 class="card-title" style="color: #7c0c6e;">Destino 3</h5>
-                                        <p class="card-text" style="color: #555;">Descrição do destino 3.</p>
+                                        <h5 class="card-title" style="color: #B94949;">Hogwarts Legacy</h5>
+                                        <p class="card-text" style="color: #555;">Descrição do jogo 3.</p>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="{{ asset('img/destino4.jpg') }}" class="card-img-top" alt="Destino 4">
+                                    <img src="{{ asset('img/league_of_legends_imagem.png') }}" class="card-img-top" alt="Jogo 4">
                                     <div class="card-body">
-                                        <h5 class="card-title" style="color: #7c0c6e;">Destino 4</h5>
-                                        <p class="card-text" style="color: #555;">Descrição do destino 4.</p>
+                                        <h5 class="card-title" style="color: #B94949;">League of Legends</h5>
+                                        <p class="card-text" style="color: #555;">Descrição do jogo 4.</p>
+
                                     </div>
                                 </div>
                             </div>
@@ -113,49 +120,52 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="{{ asset('img/destino5.jpg') }}" class="card-img-top" alt="Destino 5">
+                                    <img src="{{ asset('img/minecraft_imagem.png') }}" class="card-img-top" alt="Jogo 5">
                                     <div class="card-body">
-                                        <h5 class="card-title" style="color: #7c0c6e;">Destino 5</h5>
-                                        <p class="card-text" style="color: #555;">Descrição do destino 5.</p>
+                                        <h5 class="card-title" style="color: #B94949;">Minecraft</h5>
+                                        <p class="card-text" style="color: #555;">Descrição do jogo 5.</p>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="{{ asset('img/destino6.jpg') }}" class="card-img-top" alt="Destino 6">
+                                    <img src="{{ asset('img/no_mans_sky_imagem.png') }}" class="card-img-top" alt="Jogo 6">
                                     <div class="card-body">
-                                        <h5 class="card-title" style="color: #7c0c6e;">Destino 6</h5>
-                                        <p class="card-text" style="color: #555;">Descrição do destino 6.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Repetir as primeiras duas imagens para completar o carrossel -->
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="{{ asset('img/destino1.jpg') }}" class="card-img-top" alt="Destino 1">
-                                    <div class="card-body">
-                                        <h5 class="card-title" style="color: #7c0c6e;">Destino 1</h5>
-                                        <p class="card-text" style="color: #555;">Descrição do destino 1.</p>
+                                        <h5 class="card-title" style="color: #B94949;">No Man's Sky</h5>
+                                        <p class="card-text" style="color: #555;">Descrição do jogo 6.</p>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="{{ asset('img/destino2.jpg') }}" class="card-img-top" alt="Destino 2">
+                                    <img src="{{ asset('img/assassins_creed_rogue_imagem.png') }}" class="card-img-top" alt="Jogo 1">
                                     <div class="card-body">
-                                        <h5 class="card-title" style="color: #7c0c6e;">Destino 2</h5>
-                                        <p class="card-text" style="color: #555;">Descrição do destino 2.</p>
+                                        <h5 class="card-title" style="color: #B94949;">Assassin's Creed Rogue</h5>
+                                        <p class="card-text" style="color: #555;">Descrição do jogo 7.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="{{ asset('img/buckshot_roulette_imagem.png') }}" class="card-img-top" alt="Jogo 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="color: #B94949;">Buckshot Roulette</h5>
+                                        <p class="card-text" style="color: #555;">Descrição do jogo 8.</p>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#destinosCarousel" role="button" data-slide="prev" style="width: 5%;">
+                <a class="carousel-control-prev" href="#promocoesCarousel" role="button" data-slide="prev" style="width: 5%; background-color: red;">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#destinosCarousel" role="button" data-slide="next" style="width: 5%;">
+                <a class="carousel-control-next" href="#promocoesCarousel" role="button" data-slide="next" style="width: 5%; background-color: red;">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
@@ -163,8 +173,8 @@
         </div>
     </main>
 
-    <footer class="bg-light text-center py-3">
-        <p>&copy; 2023 Sua Empresa. Todos os direitos reservados.</p>
+    <footer class="text-center py-3" style="background-color: #0F101E; color: #fff;">
+        <p>&copy; 2024 King Games. Todos os direitos reservados.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -174,23 +184,24 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            background-color: #22243C;
         }
         .carousel-container {
-            background-color: #ffffff; /* Fundo branco */
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .card {
-            border: 1px solid #ddd;
+            border: 1px solid #ffffff;
             border-radius: 5px;
             transition: transform 0.2s, box-shadow 0.2s;
+            background-color: #18192B;
         }
         .card:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .card-img-top {
-            height: 200px;
+            height: 250px;
             object-fit: cover;
             transition: transform 0.2s, filter 0.2s;
         }
@@ -203,7 +214,9 @@
         }
         .carousel-item {
             transition: transform 1s ease, opacity 1s ease;
+            
         }
     </style>
 </body>
 </html>
+

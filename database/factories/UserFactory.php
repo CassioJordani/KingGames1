@@ -1,5 +1,7 @@
 <?php
 
+// database/factories/UserFactory.php
+
 namespace Database\Factories;
 
 use App\Models\User;
@@ -15,9 +17,15 @@ class UserFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
-            'password' => bcrypt('password'), // ou use Hash::make()
-            'is_admin' => false,
-            'remember_token' => Str::random(10),
+            'password' => bcrypt('password'),
         ];
+    }
+
+    public function admin()
+    {
+        return $this->state([
+            'is_admin' => true,
+            'email' => 'admin@example.com',
+        ]);
     }
 }
